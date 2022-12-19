@@ -1,10 +1,11 @@
-import React from 'react'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import React from "react";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 const About = () => {
   return (
@@ -27,7 +28,7 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{' '}
+              By{" "}
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
@@ -118,23 +119,16 @@ const About = () => {
             </p>
           </a>
 
-          <a
-            href="/"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/" className={styles.card} rel="noopener noreferrer">
             <h2 className={inter.className}>
               Home <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
-              Instantly go to Home page
-            </p>
-          </a>
+            <p className={inter.className}>Instantly go to Home page</p>
+          </Link>
         </div>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
