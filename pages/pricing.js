@@ -3,17 +3,16 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import Link from "next/link";
 import MainLayout from "../components/layouts/MainLayout";
-import DarkLayout from "../components/layouts/DarkLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const About = () => {
   return (
-    <>
+    <MainLayout>
       <div className={"description"}>
         <p>
           Get started by editing&nbsp;
-          <code className={"code"}>pages/about.js</code>
+          <code className={"code"}>pages/pricing.js</code>
         </p>
         <div>
           <a
@@ -55,21 +54,13 @@ const About = () => {
           </h2>
           <p className={inter.className}>Instantly go to Home page</p>
         </Link>
-        <Link href="/contact" className={"card"} rel="noopener noreferrer">
+        <Link href="/about" className={"card"} rel="noopener noreferrer">
           <h2 className={inter.className}>
-            Contact <span>-&gt;</span>
+            About <span>-&gt;</span>
           </h2>
-          <p className={inter.className}>Instantly go to Contact page</p>
+          <p className={inter.className}>Instantly go to About page</p>
         </Link>
       </div>
-    </>
-  );
-};
-
-About.getLayout = function getLayout (page) {
-  return (
-    <MainLayout>
-      <DarkLayout>{page}</DarkLayout>
     </MainLayout>
   );
 };
