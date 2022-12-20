@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSXElementConstructor, ReactNode } from "react";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import Link from "next/link";
@@ -66,7 +66,7 @@ const About = () => {
   );
 };
 
-About.getLayout = function getLayout (page) {
+About.getLayout = function getLayout (page: JSX.Element) {
   return (
     <MainLayout>
       <DarkLayout>{page}</DarkLayout>
